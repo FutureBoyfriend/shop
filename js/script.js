@@ -29,7 +29,7 @@ $(document).ready(function() {
     $.mobile.ajaxEnabled = false;
   })
 
-  var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   function safari(iS) {
     if (iS) {
