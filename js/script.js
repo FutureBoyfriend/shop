@@ -28,16 +28,4 @@ $(document).ready(function() {
   $(document).bind("mobileinit", function() {
     $.mobile.ajaxEnabled = false;
   })
-
-  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-  function safari(iS) {
-    if (iS) {
-      $(".other").addClass("hidden");
-      $(".safari").removeClass("hidden");
-    }
-  }
-
-  safari(isSafari);
-  console.log(isSafari);
 })
