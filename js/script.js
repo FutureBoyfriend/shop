@@ -9,22 +9,6 @@ $(document).ready(function() {
   $(".c").fadeIn(850);
   $(".d").fadeIn(875);
 
-  function count(amount, label) {
-    var n = {"amount": amount, "label": label}
-    $.ajax({
-      data: n,
-      dataType: "json",
-      url: "../py/count.py",
-      success: function(result, status, xhr) {
-        console.log(result);
-      },
-      error: function(xhr, status, error) {
-        console.log(error);
-        console.log(status);
-      }
-    })
-  }
-
   $("#a").click(function() {
     count(5, "bf post");
   })
@@ -47,8 +31,13 @@ $(document).ready(function() {
 
   var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
-  if (isSafari) {
-    $(".other").addClass("hidden");
-    $(".safari").removeClass("hidden");
+  function safari(iS) {
+    if (iS) {
+      $(".other").addClass("hidden");
+      $(".safari").removeClass("hidden");
+    }
   }
+
+  safari(isSafari);
+  console.log(isSafari);
 })
