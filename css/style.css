@@ -194,7 +194,6 @@ h1, h2, h3, h4 {
     width:100px;
     height:100px;
   }
-
   .center {
     text-align: center;
   }
@@ -203,6 +202,9 @@ h1, h2, h3, h4 {
 @media (max-width: 570px) {
   .item {
     flex-direction: column;
+  }
+  .center {
+    width: 100%
   }
 }
 
@@ -221,7 +223,4 @@ h1, h2, h3, h4 {
   h2 {
     font-size: 16px;
   }
-}
-
-@media (max-width: 320px) {
 }
