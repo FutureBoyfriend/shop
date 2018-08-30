@@ -46,7 +46,7 @@ body {
 
 #mobile {
   padding: 0px;
-  margin: 0px;
+  margin: 5px;
   width: 100%;
   text-align: center;
 }
@@ -184,6 +184,10 @@ body {
 
 h1, h2, h3, h4 {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (max-width: 815px) {
