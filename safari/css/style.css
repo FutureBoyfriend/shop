@@ -2,10 +2,14 @@ body {
   margin: 0px;
 }
 
+h5 {
+  margin-bottom: 20px;
+}
+
 #main {
   width: 100%;
   border: 1px solid green;
-  background: url("img/smallRainbow.png") repeat;
+  background: url("../../css/img/smallRainbow.png") repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +53,10 @@ body {
   margin: 0px;
   width: 100%;
   text-align: center;
+}
+
+span {
+  font-size: 12px;
 }
 
 .bfPost {
