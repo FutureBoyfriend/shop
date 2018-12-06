@@ -9,23 +9,35 @@ $(document).ready(function() {
   $(".c").fadeIn(850);
   $(".d").fadeIn(875);
 
-  $("#a").click(function() {
-    count(5, "bf post");
-  })
-
-  $("#b").click(function() {
-    count(10, "bf highlight");
-  })
-
-  $("#c").click(function() {
-    count(10, "promo1");
-  })
-
-  $("#d").click(function() {
-    count(15, "promo2");
-  })
-
   $(document).bind("mobileinit", function() {
     $.mobile.ajaxEnabled = false;
-  })
+  });
+  
+  console.log($(window).width());
+  
+  $(".gay_carousel").slick({
+	  autoplay: true,
+	  arrows: true,
+	  centerMode: true,
+	  dots: true,
+	  draggable: true,
+	  focusOnSelect: true,
+	  infinite: true,
+	  slidesToShow: 3,
+	  adaptiveHeight: true,
+	  responsive: [
+		{
+			breakpoint: 700,
+			settings: {
+				slidesToShow: 2
+			}
+		},
+		{
+		  breakpoint: 500,
+		  settings: {
+			  slidesToShow: 1
+		  }
+		}
+	  ]
+  });
 })
