@@ -2,6 +2,10 @@ body {
   margin: 0px;
 }
 
+b {
+	color: red;
+}
+
 #main {
   width: 100%;
   border: 1px solid green;

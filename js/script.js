@@ -19,7 +19,7 @@ $(document).ready(function() {
 	  autoplay: true,
 	  arrows: true,
 	  centerMode: true,
-	  dots: true,
+	  dots: false,
 	  draggable: true,
 	  focusOnSelect: true,
 	  infinite: true,
@@ -33,10 +33,10 @@ $(document).ready(function() {
 			}
 		},
 		{
-		  breakpoint: 500,
-		  settings: {
-			  slidesToShow: 1
-		  }
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1
+			}
 		}
 	  ]
   });
