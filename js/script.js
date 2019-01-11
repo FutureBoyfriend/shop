@@ -8,6 +8,7 @@ $(document).ready(function() {
   $(".b").fadeIn(825);
   $(".c").fadeIn(850);
   $(".d").fadeIn(875);
+  $(".e").fadeIn(900);
 
   $(document).bind("mobileinit", function() {
     $.mobile.ajaxEnabled = false;
