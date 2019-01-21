@@ -11,12 +11,18 @@ $(document).ready(function() {
   $(".e").fadeIn(900);
   $(".opt2").hide();
   $(".opt4").hide();
+  $(".opt6").hide();
+  $(".opt8").hide();
+  $("#success").hide();
+  $("#error").hide();
+  $("#discountStore").hide();
+  
+  var DISCOUNT_CODE = "GAYLOVE";
 
   $(document).bind("mobileinit", function() {
     $.mobile.ajaxEnabled = false;
   });
   
-  console.log($(window).width());
   
   $(".gay_carousel").slick({
 	  autoplay: true,
@@ -79,6 +85,16 @@ $(document).ready(function() {
 	 }
   });
   
+  $("#safariPostDiscountDropdown").change(function() {
+	  var selected = $("#safariPostDiscountDropdown :selected").text();
+	  if (selected.charAt(0) == '1') {
+		  $("#postDiscountPriceSafari").html("<strike>$5</strike> $3.75");
+	  }
+	  else {
+		$("#postDiscountPriceSafari").html("<strike>$12</strike> $9.00");
+	  }
+  });
+  
   $("#safariAccountDropdown").change(function() {
 	 var selected = $("#safariAccountDropdown :selected").text();
 	 if (selected.charAt(0) == '3') {
@@ -91,5 +107,62 @@ $(document).ready(function() {
 		 $(".opt3").hide();
 		 $(".opt4").show();
 	 }
+  });
+  
+  $("#safariPostDiscountDropdown").change(function() {
+	 var selected = $("#safariPostDiscountDropdown :selected").text();
+	 if (selected.charAt(0) == '1') {
+		$("#postDiscountPriceSafari").html("<strike>$5</strike> $3.75");
+		$(".opt6").hide();
+		$(".opt5").show();
+	 }
+	 else {
+		 $("#postDiscountPriceSafari").html("<strike>$12</strike> $9");
+		 $(".opt5").hide();
+		 $(".opt6").show();
+	 }
+  });
+  
+  
+  $("#safariAccountDiscountDropdown").change(function() {
+	 var selected = $("#safariAccountDiscountDropdown :selected").text();
+	 if (selected.charAt(0) == '3') {
+		$("#safariAccountDiscountPrice").html("<strike>$15</strike> $11.25");
+		$(".opt8").hide();
+		$(".opt7").show();
+	 }
+	 else {
+		 $("#safariAccountDiscountPrice").html("<strike>$20</strike> $15");
+		 $(".opt7").hide();
+		 $(".opt8").show();
+	 }
+  });
+  
+  $("#accountDiscountDropdown").change(function () {
+	  var selected = $("#accountDiscountDropdown :selected").text();
+	  if (selected.charAt(0) == '3') {
+		  $("#accountDiscountPrice").html("<strike>$15</strike> $11.25");
+	  }
+	  else {
+		  $("#accountDiscountPrice").html("<strike>$20</strike> $15");
+	  }
+  });
+  
+  $("#discountButton").click(function() {
+	  var discount = $("#discount").val().toUpperCase();
+	  if (discount == DISCOUNT_CODE)
+	  {
+		  $("#success").show();
+		  $("#error").hide();
+		  $("#discountStore").show();
+		  $("#store").hide();
+		  $("#discountDiv").hide();
+	  }
+	  else {
+		  $("#error").show();
+		  $("#success").hide();
+		  $("#store").show();
+		  $("#discountStore").hide();
+	  }
   });
 })

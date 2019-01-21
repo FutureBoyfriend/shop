@@ -6,6 +6,10 @@ b {
 	color: red;
 }
 
+strike {
+	color: red;
+}
+
 #main {
   width: 100%;
   border: 1px solid green;
@@ -60,6 +64,42 @@ b {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+#discountDiv {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgba(255, 255, 255, .3);
+	border-radius: 5px;
+}
+
+#discount {
+	width: 40%;
+	margin: 3px;
+}
+
+#discountButton {
+	width: 33%;
+}
+
+#successCode {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#success {
+	margin: 0px;
+	color: green;
+}
+
+#error {
+	margin: 0px;
+	color: red;
 }
 
 .redbubbleLogo {
@@ -272,6 +312,10 @@ a {
 		width: 100%;
 		height: 50px;
 	}
+	
+	#discountDiv {
+		margin-top: 15px;
+	}
 }
 
 @media (max-width: 1000px) {
@@ -287,6 +331,10 @@ a {
 	.entry div {
 		width: 100%;
 		height: 50px;
+	}
+	
+	#discountDiv {
+		margin-top: 0px;
 	}
 }
 
@@ -319,6 +367,19 @@ a {
 		width: 100%;
 		height: 50px;
 	}
+	
+	#discountDiv h4 {
+		font-size: 9px;
+	}
+	
+	#discount {
+		height: 10px;
+	}
+	
+	#discountButton {
+		height: 15px;
+		font-size: 8px;
+	}
 }
 
 @media (max-width: 570px) {
@@ -330,6 +391,14 @@ a {
   }
   .entry div {
 	font-size: 10pt;
+  }
+  
+  #discountDiv {
+	  margin-bottom: 10px;
+  }
+  
+  #discountDiv h4 {
+	  font-size: 8px;
   }
 }
 
@@ -347,5 +416,9 @@ a {
   }
   h2 {
     font-size: 16px;
+  }
+  
+  #discountDiv h4 {
+	  font-size: 6px;
   }
 }
