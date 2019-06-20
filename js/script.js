@@ -13,6 +13,8 @@ $(document).ready(function() {
   $(".opt4").hide();
   $(".opt6").hide();
   $(".opt8").hide();
+  $(".opt9").hide();
+  $(".opt10").hide();
   $("#success").hide();
   $("#error").hide();
   $("#discountStore").hide();
@@ -62,11 +64,15 @@ $(document).ready(function() {
   
   $("#accountDropdown").change(function() {
 	 var selected = $("#accountDropdown :selected").text();
-	 if (selected.charAt(0) == '3') {
-		$("#accountPrice").text("$15");
+	 if (selected.charAt(0) == '1') {
+		$("#accountPrice").text("$20");
+	 }
+	 else if(selected.charAt(0) == '3')
+	 {
+		$("#accountPrice").text("$45");
 	 }
 	 else {
-		 $("#accountPrice").text("$20");
+		 $("#accountPrice").text("$60");
 	 }
   });
   
@@ -97,14 +103,22 @@ $(document).ready(function() {
   
   $("#safariAccountDropdown").change(function() {
 	 var selected = $("#safariAccountDropdown :selected").text();
-	 if (selected.charAt(0) == '3') {
-		$("#safariAccountPrice").text("$15");
+	 if (selected.charAt(0) == '1' ) {
+		 $("#safariAccountPrice").text("$20");
+		 $(".opt9").show();
+		 $(".opt3").hide();
+		 $(".opt4").hide();
+	 }
+	 else if (selected.charAt(0) == '3') {
+		$("#safariAccountPrice").text("$45");
 		$(".opt4").hide();
+		$(".opt9").hide();
 		$(".opt3").show();
 	 }
 	 else {
-		 $("#safariAccountPrice").text("$20");
+		 $("#safariAccountPrice").text("$60");
 		 $(".opt3").hide();
+		 $(".opt9").hide();
 		 $(".opt4").show();
 	 }
   });
@@ -126,13 +140,21 @@ $(document).ready(function() {
   
   $("#safariAccountDiscountDropdown").change(function() {
 	 var selected = $("#safariAccountDiscountDropdown :selected").text();
-	 if (selected.charAt(0) == '3') {
-		$("#safariAccountDiscountPrice").html("<strike>$15</strike> $11.25");
+	 if (selected.charAt(0) == '1') {
+		$("#safariAccountDiscountPrice").html("<strike>$20</strike> $16");
 		$(".opt8").hide();
+		$(".opt7").hide();
+		$(".opt10").show();
+	 }
+	 else if (selected.charAt(0) == '3') {
+		$("#safariAccountDiscountPrice").html("<strike>$45</strike> $36");
+		$(".opt8").hide();
+		$(".opt10").hide();
 		$(".opt7").show();
 	 }
 	 else {
-		 $("#safariAccountDiscountPrice").html("<strike>$20</strike> $15");
+		 $("#safariAccountDiscountPrice").html("<strike>$60</strike> $48");
+		 $(".opt10").hide();
 		 $(".opt7").hide();
 		 $(".opt8").show();
 	 }
@@ -140,11 +162,15 @@ $(document).ready(function() {
   
   $("#accountDiscountDropdown").change(function () {
 	  var selected = $("#accountDiscountDropdown :selected").text();
-	  if (selected.charAt(0) == '3') {
-		  $("#accountDiscountPrice").html("<strike>$15</strike> $11.25");
+	  if (selected.charAt(0) == '1')
+	  {
+		  $("#accountDiscountPrice").html("<strike>$20</strike> $16")
+	  }
+	  else if (selected.charAt(0) == '3') {
+		  $("#accountDiscountPrice").html("<strike>$45</strike> $36");
 	  }
 	  else {
-		  $("#accountDiscountPrice").html("<strike>$20</strike> $15");
+		  $("#accountDiscountPrice").html("<strike>$60</strike> $48");
 	  }
   });
   
