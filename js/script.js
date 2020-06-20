@@ -18,14 +18,14 @@ $(document).ready(function() {
   $("#success").hide();
   $("#error").hide();
   $("#discountStore").hide();
-  
+
   var DISCOUNT_CODE = "GAYLOVE";
 
   $(document).bind("mobileinit", function() {
     $.mobile.ajaxEnabled = false;
   });
-  
-  
+
+
   $(".gay_carousel").slick({
 	  autoplay: true,
 	  arrows: true,
@@ -51,7 +51,7 @@ $(document).ready(function() {
 		}
 	  ]
   });
-  
+
   $("#postDropdown").change(function() {
 	 var selected = $(".dropdown :selected").text();
 	 if (selected.charAt(0) == '1') {
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		 $("#postPrice").text("$12");
 	 }
   });
-  
+
   $("#accountDropdown").change(function() {
 	 var selected = $("#accountDropdown :selected").text();
 	 if (selected.charAt(0) == '1') {
@@ -69,14 +69,14 @@ $(document).ready(function() {
 	 }
 	 else if(selected.charAt(0) == '3')
 	 {
-		$("#accountPrice").text("$45");
+		$("#accountPrice").text("$50");
 	 }
 	 else {
-		 $("#accountPrice").text("$60");
+		 $("#accountPrice").text("$80");
 	 }
   });
-  
-  
+
+
   $("#safariPostDropdown").change(function() {
 	 var selected = $("#safariPostDropdown :selected").text();
 	 if (selected.charAt(0) == '1') {
@@ -90,7 +90,7 @@ $(document).ready(function() {
 		 $(".opt2").show();
 	 }
   });
-  
+
   $("#safariPostDiscountDropdown").change(function() {
 	  var selected = $("#safariPostDiscountDropdown :selected").text();
 	  if (selected.charAt(0) == '1') {
@@ -100,7 +100,7 @@ $(document).ready(function() {
 		$("#postDiscountPriceSafari").html("<strike>$12</strike> $9.00");
 	  }
   });
-  
+
   $("#safariAccountDropdown").change(function() {
 	 var selected = $("#safariAccountDropdown :selected").text();
 	 if (selected.charAt(0) == '1' ) {
@@ -110,19 +110,19 @@ $(document).ready(function() {
 		 $(".opt4").hide();
 	 }
 	 else if (selected.charAt(0) == '3') {
-		$("#safariAccountPrice").text("$45");
+		$("#safariAccountPrice").text("$50");
 		$(".opt4").hide();
 		$(".opt9").hide();
 		$(".opt3").show();
 	 }
 	 else {
-		 $("#safariAccountPrice").text("$60");
+		 $("#safariAccountPrice").text("$80");
 		 $(".opt3").hide();
 		 $(".opt9").hide();
 		 $(".opt4").show();
 	 }
   });
-  
+
   $("#safariPostDiscountDropdown").change(function() {
 	 var selected = $("#safariPostDiscountDropdown :selected").text();
 	 if (selected.charAt(0) == '1') {
@@ -136,8 +136,8 @@ $(document).ready(function() {
 		 $(".opt6").show();
 	 }
   });
-  
-  
+
+
   $("#safariAccountDiscountDropdown").change(function() {
 	 var selected = $("#safariAccountDiscountDropdown :selected").text();
 	 if (selected.charAt(0) == '1') {
@@ -159,7 +159,7 @@ $(document).ready(function() {
 		 $(".opt8").show();
 	 }
   });
-  
+
   $("#accountDiscountDropdown").change(function () {
 	  var selected = $("#accountDiscountDropdown :selected").text();
 	  if (selected.charAt(0) == '1')
@@ -173,7 +173,7 @@ $(document).ready(function() {
 		  $("#accountDiscountPrice").html("<strike>$60</strike> $48");
 	  }
   });
-  
+
   $("#discountButton").click(function() {
 	  var discount = $("#discount").val().toUpperCase();
 	  if (discount == DISCOUNT_CODE)
